@@ -5,8 +5,6 @@ const HotRecipes = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    // on mount
-
     getRecipes();
 
     async function getRecipes() {
@@ -40,7 +38,7 @@ const HotRecipes = () => {
           return (
             <Link
               key={recipe.id}
-              to={`recipe/${recipe.id}`}
+              to={`/recipe/${recipe.id}`}
               className="rounded-2xl p-4 border flex flex-col gap-4"
             >
               <img className="rounded-2xl border" src={recipe.image} alt="" />
